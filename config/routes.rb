@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #post "/users", to: "users#create"
 
   resources :users, only: [:new, :create]
-  resources :sessions, only: [:new]
+  resources :sessions, only: [:new, :create]
 
   # login
   #get "/sessions/new", to: "sessions#new"
