@@ -1,0 +1,4 @@
+pt-BR:
+  users:
+    create:
+      success: "Cadastro realizado com sucesso!"
