@@ -16,8 +16,12 @@
   </p>
 
     <nav>
+    <% if user_signed_in? %>
+      The beatles
+    <% else %>
       <%= link_to t("menu.signup"), new_user_path %>
       <%= link_to t("menu.signin"), new_session_path %>
+    <% end %>
     </nav>
     <%= yield %>
   </body>
