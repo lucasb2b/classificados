@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      NotificationMailer.welcome(@user.name, @user.email).deliver_later
       redirect_to new_session_path, notice: t(".success")
     else
       render :new
