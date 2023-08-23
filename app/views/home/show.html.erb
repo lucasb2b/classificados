@@ -1,5 +1,13 @@
-<h1>Essa é a minha home</h1>
+<h1>Anúncios</h1>
 
-<p>
-  Aqui vai meu conteúdo
-</p>
+<div>
+  <ul>
+    <% @ads.each do |ad| %>
+      <li>
+        <p><strong><%= ad.title %></strong></p>
+        <p><%= ad.description %></p>
+        <p><%= ad.price %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
